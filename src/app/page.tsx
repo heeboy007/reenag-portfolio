@@ -7,8 +7,8 @@ const buttonStyle = "block w-full text-center py-3 px-4 rounded-md border border
 
 function Home() {
     return (
-        <div className="flex min-h-screen bg-background-primary font-sans dark:bg-black">
-            <div className="w-1/3 desktop:w-1/6 bg-background-secondary fixed h-full flex items-center justify-center">
+        <div className="flex flex-col tablet:flex-row min-h-screen bg-background-primary font-sans dark:bg-black">
+            <div className="w-full tablet:w-1/3 desktop:w-1/6 h-screen bg-background-secondary tablet:sticky tablet:top-0 flex items-center justify-center">
                 <nav className="space-y-4">
                     <Link
                         className="w-full flex items-center justify-center bg-transparent border border-transparent transform transition duration-300" 
@@ -33,9 +33,9 @@ function Home() {
                     <ThemeTogger />
                 </nav>
             </div>
-            <div className="w-2/3 desktop:w-5/6 ml-auto overflow-y-auto snap-y snap-mandatory">
-                <section className="hero-section h-screen snap-start bg-background-primary">
-                    <h1 className="mx-auto my-5 text-center text-4xl font-bold text-foreground-primary">Hi, I'm data scientist and engineer,<br></br> ReenAG.</h1>
+            <div className="w-full tablet:w-2/3 desktop:w-5/6 ml-auto overflow-y-auto tablet:snap-y tablet:snap-mandatory">
+                <section className="hero-section h-screen tablet:snap-start bg-background-primary pt-5">
+                    <h1 className="mx-auto text-center text-4xl font-bold text-foreground-primary">Hi, I'm data scientist and engineer,<br></br> ReenAG.</h1>
                     <ToyingSection />
                 </section>
             </div>

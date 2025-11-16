@@ -66,12 +66,12 @@ function ThreeScene() {
 
         // OrbitControls에서 제공하는 이벤트로 상태 전환
         controls.addEventListener('start', () => {
-            console.log('start');
+            //console.log('start');
             isUserInteracting.current = true;
         });
 
         controls.addEventListener('end', () => {
-            console.log('end');
+            //console.log('end');
             isUserInteracting.current = false;
             randomizeRotationSpeed();
         });
