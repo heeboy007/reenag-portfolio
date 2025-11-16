@@ -1,5 +1,5 @@
-import ThemeTogger from "@/component/ThemeToggler";
-import ThreeScene from "@/component/ThreeScene";
+import ThemeTogger from "@/component/home/ThemeToggler";
+import ToyingSection from "@/component/home/ToyingSection";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ const buttonStyle = "block w-full text-center py-3 px-4 rounded-md border border
 function Home() {
     return (
         <div className="flex min-h-screen bg-background-primary font-sans dark:bg-black">
-            <div className="w-1/6 bg-background-secondary fixed h-full flex items-center justify-center">
+            <div className="w-1/3 desktop:w-1/6 bg-background-secondary fixed h-full flex items-center justify-center">
                 <nav className="space-y-4">
                     <Link
                         className="w-full flex items-center justify-center bg-transparent border border-transparent transform transition duration-300" 
@@ -33,10 +33,10 @@ function Home() {
                     <ThemeTogger />
                 </nav>
             </div>
-            <div className="w-5/6 ml-auto overflow-y-auto snap-y snap-mandatory">
-                <section className="hero-section h-screen snap-start relative">
-                    <ThreeScene />
-                    <h1 className="text-black text-4xl font-bold text-center absolute top-0 left-0 w-full">Hi, I'm data scientist and engineer,<br></br> ReenAG.</h1>
+            <div className="w-2/3 desktop:w-5/6 ml-auto overflow-y-auto snap-y snap-mandatory">
+                <section className="hero-section h-screen snap-start bg-background-primary">
+                    <h1 className="mx-auto my-5 text-center text-4xl font-bold text-foreground-primary">Hi, I'm data scientist and engineer,<br></br> ReenAG.</h1>
+                    <ToyingSection />
                 </section>
             </div>
         </div>

@@ -4,10 +4,14 @@ import * as THREE from 'three';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const loader = new GLTFLoader();
+let model: THREE.Object3D | null = null;
 
 function loadModel(callback: (model: THREE.Object3D) => void) {
-    let model: THREE.Object3D | null = null;
-
+    if (model) {
+        callback(model);
+        return;
+    }
+    
     loader.load(
         '/reenAG.glb',
         (gltf) => {

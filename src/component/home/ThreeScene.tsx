@@ -19,15 +19,22 @@ function ThreeScene() {
     };
 
     const externalAnimate = useRef((model: THREE.Object3D | null) => {
-        //console.log('userInteracting', isUserInteracting);
         if (model && !isUserInteracting.current) {
-            //console.log('externalAnimate', rotationSpeedx, rotationSpeedz);
             model.rotation.x += rotationSpeedx.current;
             model.rotation.x %= 2 * Math.PI;
             model.rotation.z += rotationSpeedz.current;
             model.rotation.z %= 2 * Math.PI;
         }
     });
+
+    useEffect(() => {
+        mountRef.current?.addEventListener('mouseenter', () => {
+            isUserInteracting.current = true;
+        });
+        mountRef.current?.addEventListener('mouseleave', () => {
+            isUserInteracting.current = false;
+        });
+    }, []);
 
     useEffect(() => {
         const container = mountRef.current;
@@ -107,7 +114,6 @@ function ThreeScene() {
     return (
         <div
             ref={mountRef}
-            className="bg-point"
             style={{
                 position: 'absolute',
                 top: 0,
