@@ -2,14 +2,32 @@
 
 import * as THREE from 'three';
 
-import { useEffect, useRef, useState } from 'react';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { useEffect, useRef } from 'react';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { rangeRandom } from '@/util/random';
+import { loadModel } from '@/util/model';
 
 function ThreeScene() {
     const mountRef = useRef<HTMLDivElement | null>(null);
-    const [ rotationSpeedx ] = useState(rangeRandom(0.005, 0.015));
-    const [ rotationSpeedz ] = useState(rangeRandom(0.005, 0.015));
+    const rotationSpeedx = useRef(rangeRandom(0.005, 0.03));
+    const rotationSpeedz = useRef(rangeRandom(0.005, 0.03));
+    const isUserInteracting = useRef(false);
+
+    const randomizeRotationSpeed = () => {
+        rotationSpeedx.current = rangeRandom(-0.03, 0.03);
+        rotationSpeedz.current = rangeRandom(-0.03, 0.03);
+    };
+
+    const externalAnimate = useRef((model: THREE.Object3D | null) => {
+        //console.log('userInteracting', isUserInteracting);
+        if (model && !isUserInteracting.current) {
+            //console.log('externalAnimate', rotationSpeedx, rotationSpeedz);
+            model.rotation.x += rotationSpeedx.current;
+            model.rotation.x %= 2 * Math.PI;
+            model.rotation.z += rotationSpeedz.current;
+            model.rotation.z %= 2 * Math.PI;
+        }
+    });
 
     useEffect(() => {
         const container = mountRef.current;
@@ -31,26 +49,31 @@ function ThreeScene() {
         renderer.setSize(container.clientWidth, container.clientHeight);
         container.appendChild(renderer.domElement);
 
-        const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.2);
+        const light = new THREE.HemisphereLight(0xffffff, 0x444444, 3);
         scene.add(light);
+        
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.enablePan = false;
+        controls.enableZoom = false;
 
-        // 자동 회전시킬 모델 참조용
+        // OrbitControls에서 제공하는 이벤트로 상태 전환
+        controls.addEventListener('start', () => {
+            console.log('start');
+            isUserInteracting.current = true;
+        });
+
+        controls.addEventListener('end', () => {
+            console.log('end');
+            isUserInteracting.current = false;
+            randomizeRotationSpeed();
+        });
+
         let model: THREE.Object3D | null = null;
-
-        const loader = new GLTFLoader();
-        loader.load(
-        '/reenAG.glb',
-        (gltf) => {
-            model = gltf.scene;
-            // 모델 크기/위치 약간 조정하고 싶으면 여기서
-            model.position.set(0, 0, 0);
+        loadModel((loadedModel) => {
+            model = loadedModel;
             scene.add(model);
-        },
-        undefined,
-        (error) => {
-            console.error('GLTF load error', error);
-        }
-        );
+        });
 
         const handleResize = () => {
             if (!container) return;
@@ -62,19 +85,12 @@ function ThreeScene() {
 
         let frameId: number;
         const animate = () => {
-        frameId = requestAnimationFrame(animate);
+            frameId = requestAnimationFrame(animate);
 
-        // 여기서 계속 회전
-        if (model) {
-            // 대칭이면 Y축 기준 회전이 제일 무난
-            model.rotation.x += rotationSpeedx;
-            model.rotation.x %= 2 * Math.PI;
-            model.rotation.z += rotationSpeedz; // 속도는 취향껏 조절
-            model.rotation.z %= 2 * Math.PI;
-            // 다른 축도: model.rotation.x += 0.005; 등
-        }
+            externalAnimate.current?.(model);
 
-        renderer.render(scene, camera);
+            controls.update();
+            renderer.render(scene, camera);
         };
         animate();
 
