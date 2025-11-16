@@ -22,7 +22,7 @@ function ThreeScene() {
             45,
             container.clientWidth / container.clientHeight,
             0.1,
-            100
+            130
         );
         camera.position.set(0, 80, 0); // z축 위로
         camera.lookAt(0, 0, 0);
