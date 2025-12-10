@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import { useCallback } from "react";
 
@@ -17,8 +16,6 @@ function MobileMockUp({ width, files }: {
     const bezel_w = width * bezel_w_ratio;
     const bezel_h = height * bezel_h_ratio;
     const margin = height * margin_ratio;
-    const rounded_top = 4.6 * 16 / 812;
-    const rounded_bottom = 4 * 16 / 812;
 
     const [sliderRef] = useKeenSlider({
         loop: true,

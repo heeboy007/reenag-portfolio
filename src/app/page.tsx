@@ -22,18 +22,23 @@ function Home() {
                     </Link>
                     <Link
                         className={buttonStyle}
-                        href="/about">
-                        <span className="text-2xl font-bold text-foreground-primary">About</span>
-                    </Link>
-                    <Link
-                        className={buttonStyle}
                         href="/projects">
                         <span className="text-2xl font-bold text-foreground-primary">Projects</span>
                     </Link>
                     <Link
                         className={buttonStyle}
-                        href="/contact">
-                        <span className="text-2xl font-bold text-foreground-primary">Contact</span>
+                        href="https://passingprogram.tistory.com/">
+                        <span className="text-2xl font-bold text-foreground-primary">Blog(KR)</span>
+                    </Link>
+                    <Link
+                        className={buttonStyle}
+                        href="/blog">
+                        <span className="text-2xl font-bold text-foreground-primary">Blog(EN)</span>
+                    </Link>
+                    <Link
+                        className={buttonStyle}
+                        href="/contacts">
+                        <span className="text-2xl font-bold text-foreground-primary">Contacts</span>
                     </Link>
                     <ThemeTogger />
                 </nav>
@@ -48,30 +53,45 @@ function Home() {
                     <ToyingSection />
                 </section>
 
-                <section className={`${sectionStyle} bg-hero-gradient flex flex-col justify-center items-center`}>
+                <section className={`${sectionStyle} bg-background-primary flex flex-col justify-center items-center`}>
                     <h1 className={`${mainTextStyle} text-gradient mb-4`}>
-                        I build models, pipelines, and real-world systems that 
+                        I enjoy building pipelines, models, and real-world systems that 
                         <br />
-                        <span className="italic font-semibold">actually work.</span>
+                        <span className="italic font-semibold">works as a whole.</span>
                     </h1>
-                    <MobileMockUp width={380} files={[
+                    <MobileMockUp width={360} files={[
                         "/proj1/screenshots/mobile/login.png",
                         "/proj1/screenshots/mobile/tutorial.png",
                     ]} />
+                    <p className="text-center text-sm font-light text-foreground-primary">
+                        disclaimer: This design is not created by myself, the app was not released in real production.
+                    </p>
                 </section>
 
-                <section className={`${sectionStyle} bg-point`}>
-                    <h1 className={`${mainTextStyleBlack}`}>
-                        I work across multiple domains and connect them through
+                <section className={`${sectionStyle} bg-hero-gradient flex flex-col justify-center items-center`}>
+                    <h1 className={`${mainTextStyleBlack} text-foreground-primary`}>
+                        I work across multiple domains and weave them together through
                         <br />
                         <span className="italic font-semibold">a single principle </span>
-                        : understanding the system as a whole.
+                        : connecting them in a fluent, extensive way.
                     </h1>
-                    <h3 className={subTextStyle}>
+                    <h3 className={`${subTextStyle} text-foreground-primary`}>
                         ML, devOps, blockchain, databases —
                         to design solutions with depth and practical impact.
                     </h3>
-                    <Image src="/proj1/architecture.png" alt="architecture" width={1000} height={1000} className="object-cover" />
+                    <div className="flex flex-1 justify-center items-center p-20">
+                        <Image src="/proj1/architecture.png" alt="architecture" width={1000} height={1000} className="object-cover" />
+                    </div>
+                </section>
+
+                <section className={`${sectionStyle} bg-point flex flex-col justify-center items-center`}>
+                    <h1 className={`${mainTextStyleBlack}`}>
+                        I also really like writing in general, not just code.
+                    </h1>
+                    <h3 className={subTextStyle}>
+                        I have broad interests, including psychology, EDM music, even brewing some coffee.
+                    </h3>
+
                 </section>
             </div>
         </div>
