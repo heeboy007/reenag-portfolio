@@ -29,8 +29,9 @@ function MobileMockUp({ width, files }: {
             <Image 
                 src={filename} 
                 alt="file" 
-                fill
-                className="object-fill " />
+                width={width - bezel_w}
+                height={height - bezel_h}
+                className="object-cover " />
         </div>
     }, [files]);
 
