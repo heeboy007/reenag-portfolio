@@ -44,10 +44,8 @@ function MobileMockUp({ width, files }: {
         <Image 
             src="/shared/bezel_cut.png" 
             alt="bezel" 
-            width={width}
-            height={height}
-            style={{ width: width, height: height }}
-            className={`absolute top-0 left-0 right-0 bottom-0 pointer-events-none`} />
+            fill
+            className={`absolute top-0 left-0 right-0 bottom-0 object-fill pointer-events-none`} />
     </div>
 }
 
