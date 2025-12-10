@@ -80,7 +80,7 @@ function Home() {
                         to design solutions with depth and practical impact.
                     </h3>
                     <div className="flex flex-1 justify-center items-center p-20">
-                        <Image src="/proj1/architecture.png" alt="architecture" width={1000} height={1000} className="object-cover" />
+                        <Image src="/proj1/architecture.png" alt="architecture" width={1000} height={1000} className="object-cover rounded-xl" />
                     </div>
                 </section>
 
@@ -91,6 +91,26 @@ function Home() {
                     <h3 className={subTextStyle}>
                         I have broad interests — psychology, EDM, and even brewing coffee.
                     </h3>
+                    <p className="text-center text-sm font-light text-foreground-primary">
+                        I have two blogs, one in Korean and one in English.
+                        <br />
+                        <Link
+                            className={buttonStyle}
+                            href="https://passingprogram.tistory.com/">
+                            <span className="text-2xl font-bold text-foreground-primary">Blog(KR)</span>
+                        </Link>
+                        <div className="w-4 h-4" />
+                        <Link
+                            className={buttonStyle}
+                            href="/blog">
+                            <span className="text-2xl font-bold text-foreground-primary">Blog(EN)</span>
+                        </Link>
+                    </p>
+                    <div className="w-4 h-4" />
+                    <p className="text-center text-sm font-light text-background-primary">
+                        here, have a image of my beloved coffee(which is even not brewed yet) for no reason.
+                    </p>
+                    <Image src="/shared/coffee.png" alt="coffee" width={300} height={400} className="rounded-2xl" />
                 </section>
             </div>
         </div>
