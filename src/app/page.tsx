@@ -1,9 +1,14 @@
 import ThemeTogger from "@/component/home/ThemeToggler";
 import ToyingSection from "@/component/home/ToyingSection";
+import { MobileMockUp } from "@/component/shared/MobileMockUp";
 import Image from "next/image";
 import Link from "next/link";
 
 const buttonStyle = "block w-full text-center py-3 px-4 rounded-md border border-transparent bg-background-button transform hover:scale-105 hover:bg-background-button-hover transition duration-300";
+const sectionStyle = "hero-section h-screen tablet:snap-start bg-background-primary pt-5";
+const mainTextStyle = "mx-auto text-center tablet:text-2xl desktop:text-4xl font-bold text-foreground-primary";
+const mainTextStyleBlack = "mx-auto text-center tablet:text-2xl desktop:text-4xl font-bold text-black";
+const subTextStyle = "mx-auto text-center tablet:text-lg desktop:text-2xl font-bold text-black mt-4";
 
 function Home() {
     return (
@@ -33,10 +38,40 @@ function Home() {
                     <ThemeTogger />
                 </nav>
             </div>
-            <div className="w-full tablet:w-2/3 desktop:w-5/6 ml-auto overflow-y-auto tablet:snap-y tablet:snap-mandatory">
-                <section className="hero-section h-screen tablet:snap-start bg-background-primary pt-5">
-                    <h1 className="mx-auto text-center text-4xl font-bold text-foreground-primary">Hi, I'm data scientist and engineer,<br></br> ReenAG.</h1>
+            <div className="w-full tablet:w-2/3 desktop:w-5/6 ml-auto overflow-y-auto snap-y snap-mandatory h-screen">
+                <section className={sectionStyle}>
+                    <h1 className={mainTextStyle}>
+                        Machine Learning Engineer & Systems Thinker.
+                        <br />
+                        <span className="text-point font-semibold">ReenAG</span>
+                    </h1>
                     <ToyingSection />
+                </section>
+
+                <section className={`${sectionStyle} bg-hero-gradient flex flex-col justify-center items-center`}>
+                    <h1 className={`${mainTextStyle} text-gradient mb-4`}>
+                        I build models, pipelines, and real-world systems that 
+                        <br />
+                        <span className="italic font-semibold">actually work.</span>
+                    </h1>
+                    <MobileMockUp width={380} files={[
+                        "/proj1/screenshots/mobile/login.png",
+                        "/proj1/screenshots/mobile/tutorial.png",
+                    ]} />
+                </section>
+
+                <section className={`${sectionStyle} bg-point`}>
+                    <h1 className={`${mainTextStyleBlack}`}>
+                        I work across multiple domains and connect them through
+                        <br />
+                        <span className="italic font-semibold">a single principle </span>
+                        : understanding the system as a whole.
+                    </h1>
+                    <h3 className={subTextStyle}>
+                        ML, devOps, blockchain, databases —
+                        to design solutions with depth and practical impact.
+                    </h3>
+                    <Image src="/proj1/architecture.png" alt="architecture" width={1000} height={1000} className="object-cover" />
                 </section>
             </div>
         </div>

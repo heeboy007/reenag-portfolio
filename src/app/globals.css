@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import "keen-slider/keen-slider.min.css";
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 /* Tailwind CSS Breakpoints */
@@ -42,6 +44,14 @@
   --color-foreground-secondary: var(--foreground-secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+.bg-hero-gradient {
+  background: linear-gradient(
+      180deg,
+      var(--color-background-primary) 0%, 
+      var(--color-point) 100%
+  );
 }
 
 /* hide scrollbar */

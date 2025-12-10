@@ -18,7 +18,7 @@ function ToyingItem({ randomizeBgColor }: { randomizeBgColor?: boolean }) {
     return (
         <div
             style={{ backgroundColor: bgColor }}
-            className="desktop:w-[28vh] desktop:h-[28vh] w-[20vh] h-[20vh] rounded-2xl relative m-4">
+            className="desktop:w-[25vh] desktop:h-[25vh] w-[20vh] h-[20vh] rounded-2xl relative m-4">
             <ThreeScene />
         </div>
     )

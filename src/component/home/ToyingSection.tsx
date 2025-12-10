@@ -14,8 +14,8 @@ function ToyingSection() {
 
     return (
         <div className="flex flex-wrap justify-center items-center">
-            <ToyingItem />
             {toy_items}
+            <ToyingItem />
         </div>
     )
 }

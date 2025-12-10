@@ -9,19 +9,19 @@ import { loadModel } from '@/util/model';
 
 function ThreeScene() {
     const mountRef = useRef<HTMLDivElement | null>(null);
-    const rotationSpeedx = useRef(rangeRandom(0.005, 0.03));
-    const rotationSpeedz = useRef(rangeRandom(0.005, 0.03));
+    //const rotationSpeedx = useRef(rangeRandom(0.005, 0.03));
+    const rotationSpeedz = useRef(rangeRandom(-0.03, 0.03));
     const isUserInteracting = useRef(false);
 
     const randomizeRotationSpeed = () => {
-        rotationSpeedx.current = rangeRandom(-0.03, 0.03);
+        //rotationSpeedx.current = rangeRandom(-0.03, 0.03);
         rotationSpeedz.current = rangeRandom(-0.03, 0.03);
     };
 
     const externalAnimate = useRef((model: THREE.Object3D | null) => {
         if (model && !isUserInteracting.current) {
-            model.rotation.x += rotationSpeedx.current;
-            model.rotation.x %= 2 * Math.PI;
+            //model.rotation.x += rotationSpeedx.current;
+            //model.rotation.x %= 2 * Math.PI;
             model.rotation.z += rotationSpeedz.current;
             model.rotation.z %= 2 * Math.PI;
         }
