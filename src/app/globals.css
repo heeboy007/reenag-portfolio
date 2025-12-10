@@ -54,6 +54,10 @@
   );
 }
 
+.st0 {
+  fill: #FFE812;
+}
+
 /* hide scrollbar */
 html {
   scrollbar-width: none;      /* Firefox */

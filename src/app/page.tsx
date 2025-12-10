@@ -46,7 +46,7 @@ function Home() {
             <div className="w-full tablet:w-2/3 desktop:w-5/6 ml-auto overflow-y-auto snap-y snap-mandatory h-screen">
                 <section className={sectionStyle}>
                     <h1 className={mainTextStyle}>
-                        Machine Learning Engineer & Systems Thinker.
+                        On-chain Data Engineer & Machine Learning Practitioner | Systems-driven problem solver
                         <br />
                         <span className="text-point font-semibold">ReenAG</span>
                     </h1>
@@ -93,20 +93,19 @@ function Home() {
                     </h3>
                     <p className="text-center text-sm font-light text-foreground-primary">
                         I have two blogs, one in Korean and one in English.
-                        <br />
+                    </p>
+                    <div className="flex flex-col gap-4 w-100 my-4">
                         <Link
                             className={buttonStyle}
                             href="https://passingprogram.tistory.com/">
                             <span className="text-2xl font-bold text-foreground-primary">Blog(KR)</span>
                         </Link>
-                        <div className="w-4 h-4" />
                         <Link
                             className={buttonStyle}
                             href="/blog">
                             <span className="text-2xl font-bold text-foreground-primary">Blog(EN)</span>
                         </Link>
-                    </p>
-                    <div className="w-4 h-4" />
+                    </div>
                     <p className="text-center text-sm font-light text-background-primary">
                         here, have a image of my beloved coffee(which is even not brewed yet) for no reason.
                     </p>
