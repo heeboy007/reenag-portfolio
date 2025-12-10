@@ -55,16 +55,16 @@ function Home() {
 
                 <section className={`${sectionStyle} bg-background-primary flex flex-col justify-center items-center`}>
                     <h1 className={`${mainTextStyle} text-gradient mb-4`}>
-                        I enjoy building pipelines, models, and real-world systems that 
+                        I enjoy building pipelines, models, and real-world systems that
                         <br />
-                        <span className="italic font-semibold">works as a whole.</span>
+                        <span className="italic font-semibold">work together as a whole.</span>
                     </h1>
                     <MobileMockUp width={360} files={[
                         "/proj1/screenshots/mobile/login.png",
                         "/proj1/screenshots/mobile/tutorial.png",
                     ]} />
                     <p className="text-center text-sm font-light text-foreground-primary">
-                        disclaimer: This design is not created by myself, the app was not released in real production.
+                        Disclaimer: I did not design this UI, and the app itself has not been released to production.
                     </p>
                 </section>
 
@@ -72,8 +72,8 @@ function Home() {
                     <h1 className={`${mainTextStyleBlack} text-foreground-primary`}>
                         I work across multiple domains and weave them together through
                         <br />
-                        <span className="italic font-semibold">a single principle </span>
-                        : connecting them in a fluent, extensive way.
+                        <span className="italic font-semibold">a single principle</span>
+                        : connecting them in a coherent, scalable way.
                     </h1>
                     <h3 className={`${subTextStyle} text-foreground-primary`}>
                         ML, devOps, blockchain, databases —
@@ -86,12 +86,11 @@ function Home() {
 
                 <section className={`${sectionStyle} bg-point flex flex-col justify-center items-center`}>
                     <h1 className={`${mainTextStyleBlack}`}>
-                        I also really like writing in general, not just code.
+                        I also really enjoy writing — not just code.
                     </h1>
                     <h3 className={subTextStyle}>
-                        I have broad interests, including psychology, EDM music, even brewing some coffee.
+                        I have broad interests — psychology, EDM, and even brewing coffee.
                     </h3>
-
                 </section>
             </div>
         </div>
