@@ -1,6 +1,7 @@
 'use client';
 
 import { useKeenSlider } from "keen-slider/react";
+import Image from "next/image";
 import { useCallback } from "react";
 
 const ratio = 812 / 380;
@@ -40,7 +41,7 @@ function MobileMockUp({ width, files }: {
         <div ref={sliderRef} className="keen-slider" style={{ width: width - bezel_w, height: height - bezel_h, marginTop: margin }}>
             {files.map(renderFiles)}
         </div>
-        <img 
+        <Image 
             src="/shared/bezel_cut.png" 
             alt="bezel" 
             width={width}
