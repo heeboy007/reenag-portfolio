@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const buttonStyle = "block w-full text-center py-3 px-4 rounded-md border border-transparent bg-background-button transform hover:scale-105 hover:bg-background-button-hover transition duration-300";
 const sectionStyle = "hero-section h-screen tablet:snap-start bg-background-primary pt-5";
-const mainTextStyle = "mx-auto text-center tablet:text-2xl desktop:text-4xl font-bold text-foreground-primary";
-const mainTextStyleBlack = "mx-auto text-center tablet:text-2xl desktop:text-4xl font-bold text-black";
-const subTextStyle = "mx-auto text-center tablet:text-lg desktop:text-2xl font-bold text-black mt-4";
+const mainTextStyle = "mx-auto text-center tablet:text-xl desktop:text-3xl font-bold text-foreground-primary";
+const mainTextStyleBlack = "mx-auto text-center tablet:text-xl desktop:text-3xl font-bold text-black";
+const subTextStyle = "mx-auto text-center tablet:text-base desktop:text-2xl font-bold text-black mt-4";
 
 function Home() {
     return (

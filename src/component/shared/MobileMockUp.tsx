@@ -5,8 +5,8 @@ import Image from "next/image";
 import { useCallback } from "react";
 
 const ratio = 812 / 380;
-const bezel_w_ratio = 19 / 380;
-const bezel_h_ratio = 27 / 812;
+const bezel_w_ratio = 25 / 380;
+const bezel_h_ratio = 48 / 812;
 const margin_ratio = 5 / 812;
 
 function MobileMockUp({ width, files }: { 
@@ -31,7 +31,7 @@ function MobileMockUp({ width, files }: {
                 alt="file" 
                 width={width - bezel_w}
                 height={height - bezel_h}
-                className="object-cover " />
+                className="object-cover" />
         </div>
     }, [files]);
 
