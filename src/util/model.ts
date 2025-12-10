@@ -8,7 +8,7 @@ let model: THREE.Object3D | null = null;
 
 function loadModel(callback: (model: THREE.Object3D) => void) {
     if (model) {
-        callback(model);
+        callback(model.clone());
         return;
     }
     

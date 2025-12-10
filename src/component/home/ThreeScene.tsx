@@ -9,7 +9,6 @@ import { loadModel } from '@/util/model';
 
 function ThreeScene() {
     const mountRef = useRef<HTMLDivElement | null>(null);
-    //const rotationSpeedx = useRef(rangeRandom(0.005, 0.03));
     const rotationSpeedz = useRef(rangeRandom(-0.03, 0.03));
     const isUserInteracting = useRef(false);
 
@@ -34,6 +33,15 @@ function ThreeScene() {
         mountRef.current?.addEventListener('mouseleave', () => {
             isUserInteracting.current = false;
         });
+        
+        return () => {
+            mountRef.current?.removeEventListener('mouseenter', () => {
+                isUserInteracting.current = true;
+            });
+            mountRef.current?.removeEventListener('mouseleave', () => {
+                isUserInteracting.current = false;
+            });
+        };
     }, []);
 
     useEffect(() => {
@@ -103,9 +111,12 @@ function ThreeScene() {
 
         return () => {
             cancelAnimationFrame(frameId);
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
+
             renderer.dispose();
-            if (container.firstChild) {
+
+            // DOM에서 canvas 제거 (여기서 에러 안 나도록 방어)
+            if (renderer.domElement && renderer.domElement.parentNode === container) {
                 container.removeChild(renderer.domElement);
             }
         };
