@@ -25,13 +25,13 @@ function MobileMockUp({ width, files }: {
     });
 
     const renderFiles = useCallback((filename: string) => {
-        return <Image 
-            key={filename} 
-            src={filename} 
-            alt="file" 
-            width={width - bezel_w}
-            height={height - bezel_h}
-            className="keen-slider__slide object-fill rounded-[4rem]" />
+        return <div key={filename} style={{ width: width - bezel_w, height: height - bezel_h }} className="keen-slider__slide rounded-[4rem] overflow-hidden">
+            <Image 
+                src={filename} 
+                alt="file" 
+                fill
+                className="object-fill " />
+        </div>
     }, [files]);
 
     return <div className="relative flex items-center justify-center overflow-hidden rounded-t-[4.6rem] rounded-b-[4rem]" style={{ 
