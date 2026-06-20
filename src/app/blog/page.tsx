@@ -36,14 +36,17 @@ function Blog() {
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '16px', listStyle: 'none', padding: 0, paddingTop: '8px' }}>
                 {posts.map((post) => (
                 <li key={post.slug} style={{ borderBottom: '1px solid text-foreground-secondary', paddingBottom: '16px' }}>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{display: 'flex', flexDirection: 'row', minHeight: "100px" }}>
                         {post.meta.thumbnail ?
-                            <Image 
-                            alt="thumbnail" 
-                            width={100} 
-                            height={100}
-                            src={`/api/blog/images/${getThumbnail(post.meta.thumbnail)}`} /> : <></>
-                        }
+                            <div className="border border-foreground-primary rounded-lg w-[100px] h-[100px] mr-[10px] relative overflow-hidden">
+                                <Image 
+                                alt="thumbnail" 
+                                fill
+                                className="object-cover"
+                                src={`/api/blog/images/${getThumbnail(post.meta.thumbnail)}`} /> 
+                            </div>
+                        : <></>}
+
                         <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                             <Link 
                                 href={`/blog/contents/${post.slug}`}
@@ -61,6 +64,7 @@ function Blog() {
                             </small>
                         </div>
                     </div>
+                    <hr style={{ marginTop: "8px" }}></hr>
                 </li>
                 ))}
             </ul>
