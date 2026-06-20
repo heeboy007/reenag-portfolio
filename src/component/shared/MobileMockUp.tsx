@@ -46,6 +46,7 @@ function MobileMockUp({ width, files }: {
             src="/shared/bezel_cut.png" 
             alt="bezel" 
             fill
+            sizes={`\${width - bezel_w} \${height: height - bezel_h}`}
             className={`absolute top-0 left-0 right-0 bottom-0 object-fill pointer-events-none`} />
     </div>
 }

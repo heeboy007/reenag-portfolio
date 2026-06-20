@@ -15,12 +15,14 @@
     "gray-matter": "^4.0.3",
     "keen-slider": "^6.8.6",
     "next": "^16.2.9",
+    "next-mdx-remote": "^6.0.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "three": "^0.181.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

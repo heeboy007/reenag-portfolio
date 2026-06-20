@@ -91,7 +91,7 @@ function Home() {
                     <h3 className={subTextStyle}>
                         I have broad interests — psychology, EDM, and even brewing coffee.
                     </h3>
-                    <p className="text-center text-sm font-light text-background-primary">
+                    <p className="text-center text-sm font-light text-foreground-primary">
                         I have two blogs, one in Korean and one in English.
                     </p>
                     <div className="flex flex-col gap-4 w-100 my-4">
@@ -106,7 +106,7 @@ function Home() {
                             <span className="text-2xl font-bold text-foreground-primary">Blog(EN)</span>
                         </Link>
                     </div>
-                    <p className="text-center text-sm font-light text-background-primary">
+                    <p className="text-center text-sm font-light text-foreground-primary">
                         here, have a image of my beloved coffee(which is even not brewed yet) for no reason.
                     </p>
                     <Image src="/shared/coffee.png" alt="coffee" width={300} height={400} className="rounded-2xl" />

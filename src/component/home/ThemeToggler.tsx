@@ -4,7 +4,7 @@ import { useTheme } from "@/context/ThemeControlledHtml";
 
 const buttonStyle = "relative inline-flex h-8 w-14 items-center rounded-full bg-foreground-secondary/80 transition-colors duration-200 shadow-inner";
 
-function ThemeTogger() {
+function ThemeToggler() {
     const { theme, toggleTheme } = useTheme();
 
     return (
@@ -38,4 +38,4 @@ function ThemeTogger() {
     );
 }
 
-export default ThemeTogger;
+export default ThemeToggler;
