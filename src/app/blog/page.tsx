@@ -1,10 +1,25 @@
 import ThemeToggler from "@/component/home/ThemeToggler";
 import MyPrettyButton from "@/component/shared/MyPrettyButton";
 import { getAllPosts } from "@/util/mdx";
+import Image from "next/image";
 import Link from "next/link";
 
 function Blog() {
   const posts = getAllPosts();
+
+  const listDescription = (desciption: string | undefined, content: string) => {
+    if(desciption != undefined && desciption.length > 0)
+        return desciption
+    else
+        return content.slice(0, 30) + "...";
+  }
+
+  const getThumbnail = (thumbnail: string | undefined) => {
+    if(thumbnail)
+        return `${thumbnail.slice(3, -2)}`
+    else 
+        return null
+}
 
   return (
         <div style={{ maxWidth: '1000px', margin: '40px auto', padding: '0 20px' }}>
@@ -20,19 +35,33 @@ function Blog() {
         
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '16px', listStyle: 'none', padding: 0, paddingTop: '8px' }}>
                 {posts.map((post) => (
-                <li key={post.slug} style={{ borderBottom: '1px solid #eee', paddingBottom: '16px' }}>
-                    <Link 
-                        href={`/blog/contents/${post.slug}`}
-                        style={{ fontSize: '1.25rem', color: '#0070f3', textDecoration: 'none', fontWeight: '600' }}
-                        >
-                        {post.meta.title}
-                    </Link>
-                    <p style={{ color: '#666', fontSize: '0.9rem', margin: '4px 0' }}>
-                        {post.meta.description}
-                    </p>
-                    <small style={{ color: '#999' }}>
-                        {new Date(post.meta.date).toLocaleDateString('en-US')}
-                    </small>
+                <li key={post.slug} style={{ borderBottom: '1px solid text-foreground-secondary', paddingBottom: '16px' }}>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                        {post.meta.thumbnail ?
+                            <Image 
+                            alt="thumbnail" 
+                            width={100} 
+                            height={100}
+                            src={`/api/blog/images/${getThumbnail(post.meta.thumbnail)}`} /> : <></>
+                        }
+                        <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                            <Link 
+                                href={`/blog/contents/${post.slug}`}
+                                style={{ fontSize: '1.25rem', color: 'text-foreground-primary', textDecoration: 'none', fontWeight: '600' }}
+                                >
+                                {post.meta.title}
+                            </Link>
+
+                            <p style={{ color: 'text-foreground-button', fontSize: '0.9rem', margin: '4px 0' }}>
+                                {listDescription(post.meta.smalltitle, post.content)}
+
+                            </p>
+
+                            <small style={{ color: 'text-foreground-button-hover' }}>
+                                {new Date(post.meta.date).toLocaleDateString('en-US')}
+                            </small>
+                        </div>
+                    </div>
                 </li>
                 ))}
             </ul>

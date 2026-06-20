@@ -2,13 +2,13 @@ import nextMdx from '@next/mdx'
 
 const withMdx = nextMdx({
     // By default only the `.mdx` extension is supported.
-    extension: /\.mdx?$/,
+    extension: /\.md?$/,
     options: {},
 })
 
 const nextConfig = withMdx({
     // Support MDX files as pages:
-    pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
+    pageExtensions: ['md', 'tsx', 'ts', 'jsx', 'js'],
     reactCompiler: true,
     // reactStrictMode: false,
 })

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Posts/Hello!.md",
+                "file": "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hello!"
+              "title": "How to not abuse \"Release\" as deployment"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Posts/Hello!.md",
+                "file": "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Hello! 의 백링크"
+              "title": "How to not abuse \"Release\" as deployment 의 백링크"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Posts/Hello!.md",
+                "file": "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Hello! 의 나가는 링크"
+              "title": "How to not abuse \"Release\" as deployment 의 나가는 링크"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Posts/Hello!.md",
+                "file": "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Hello! 의 개요"
+              "title": "How to not abuse \"Release\" as deployment 의 개요"
             }
           }
         ]
@@ -185,8 +185,9 @@
   },
   "active": "bdce30d88b3b4ef9",
   "lastOpenFiles": [
-    "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
     "Posts/Hello!.md",
+    "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
+    "Assets/Images/Pasted image 20260620194731.png",
     "Hello!.md",
     "Personal/메모/2026. 03. 11. 수요일.md",
     "Posts/CI-CD",
@@ -221,7 +222,6 @@
     "Assets/Images/Pasted image 20260605222314.png",
     "Assets/Images/Pasted image 20260605205008.png",
     "Assets/Images/Pasted image 20260605164331.png",
-    "Assets/Images/Pasted image 20260327120543.png",
     "Assets/Images",
     "Assets",
     "환영합니다!.md",
