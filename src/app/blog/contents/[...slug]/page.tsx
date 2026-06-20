@@ -39,7 +39,7 @@ export default async function PostPage({ params }: Props) {
                 
                 <h1 style={{ fontSize: '2.5rem', marginTop: '8px', marginBottom: '8px', lineHeight: 1.2 }}>{post.meta.title}</h1>
                     <p style={{ color: '#999', marginBottom: '24px' }}>
-                    {new Date(post.meta.date).toLocaleDateString('ko-KR')}
+                        {new Date(post.meta.date).toLocaleDateString('en-US')}
                     </p>
                 <hr style={{ border: 0, borderTop: '1px solid text-foreground-primary', marginBottom: '32px' }} />
                 

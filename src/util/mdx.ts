@@ -10,7 +10,6 @@ export function getPostSlugs() {
     recursive: true,
     withFileTypes: true
   }).filter((path) => /\.md?$/.test(path.name)).map((path) => (path.parentPath.slice(POSTS_PATH.length) + '/' + path.name));
-  console.log(result)
   return result
 }
 
@@ -30,7 +29,12 @@ export function getPostBySlug(slug: string) {
 
 export function getAllPosts() {
   const slugs = getPostSlugs();
-  const posts = slugs.map((slug) => getPostBySlug(slug));
-  // 날짜 순 정렬 등의 로직 추가 가능
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug))
+    .sort((post_a, post_b) => {
+      const date_a = new Date(post_a.meta.date)
+      const date_b = new Date(post_b.meta.date)
+      return date_b.getTime() - date_a.getTime()
+    })
   return posts;
 }
