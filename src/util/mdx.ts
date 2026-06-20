@@ -18,7 +18,13 @@ export function getPostBySlug(slug: string) {
   const fullPath = path.join(POSTS_PATH, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-  const { data, content } = matter(fileContents, {
+  const imagedContent = fileContents.replace(/!\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g, (match, imageName) => {
+    // 공백이나 경로 찌꺼기 정리
+    const trimmedName = imageName.trim();
+    return `\n![${trimmedName}](/api/blog/images/${encodeURI(trimmedName)})\n`;
+  });
+
+  const { data, content } = matter(imagedContent, {
     engines: {
       yaml: (str) => yaml.load(str) as object
     }

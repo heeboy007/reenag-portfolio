@@ -16,7 +16,7 @@ function Blog() {
 
   const getThumbnail = (thumbnail: string | undefined) => {
     if(thumbnail)
-        return `${thumbnail.slice(3, -2)}`
+        return `${thumbnail}`
     else 
         return null
 }
