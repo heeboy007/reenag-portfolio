@@ -6,6 +6,9 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 interface Props {
   params: Promise<{ slug: string[] }>;
 }
@@ -65,7 +68,15 @@ export default async function PostPage({ params }: Props) {
                 
                 {/* 마크다운 본문이 HTML로 파싱되어 들어가는 부분 */}
                 <div className="prose">
-                    <MDXRemote source={post.content} components={mdxComponents} />
+                    <MDXRemote 
+                        source={post.content} 
+                        components={mdxComponents} 
+                        options={{
+                            mdxOptions: {
+                                remarkPlugins: [remarkMath],
+                                rehypePlugins: [rehypeKatex],
+                            }
+                        }} />
                 </div>
 
                 <div className="absolute bottom-0 right-0 p-4 prose">

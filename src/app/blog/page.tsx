@@ -27,7 +27,7 @@ function Blog() {
                 ReenAG's Blog
             </h1>
 
-            <MyPrettyButton title='돌아가기' href='/'>
+            <MyPrettyButton title='go back' href='/'>
                 <div style={{ margin: '2px' }}>
                     <p style={{  color: 'text-foreground-primary', textDecoration: 'none'  }}>⬅️ back</p>
                 </div>
@@ -54,7 +54,6 @@ function Blog() {
 
                             <p style={{ color: 'text-foreground-button', fontSize: '0.9rem', margin: '4px 0' }}>
                                 {listDescription(post.meta.smalltitle, post.content)}
-
                             </p>
 
                             <small style={{ color: 'text-foreground-button-hover' }}>

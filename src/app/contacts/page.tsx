@@ -1,11 +1,16 @@
 import ThemeTogger from "@/component/home/ThemeToggler";
+import MyPrettyButton from "@/component/shared/MyPrettyButton";
 import Link from "next/link";
 
 function Contacts() {
     return <div className="tablet:flex-row min-h-screen bg-background-primary font-sans dark:bg-black flex relative">
-        <div style={{ marginBottom: '24px' }}>
-            <Link href="/blog" style={{ color: 'text-foreground-primary', textDecoration: 'none' }}>back to main page</Link>
-        </div>  
+        <div className="absolute top-0 left-0 p-4">
+            <MyPrettyButton title='back' href='/'>
+                <div style={{ margin: '2px' }}>
+                    <p style={{  color: 'text-foreground-primary', textDecoration: 'none'  }}>⬅️ to list</p>
+                </div>
+            </MyPrettyButton>
+        </div>
         <div className="flex flex-1 flex-col justify-center items-center">
             <h2 className="text-2xl font-bold text-foreground-primary">Global Contacts</h2>
             <p>Email: <span className="text-foreground-primary">heeboy007@gmail.com</span></p>
