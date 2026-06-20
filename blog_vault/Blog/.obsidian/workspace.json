@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
+                "file": "Assets/Template/BaseTemplate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How to not abuse \"Release\" as deployment"
+              "title": "BaseTemplate"
             }
           }
         ]
@@ -194,10 +194,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bdce30d88b3b4ef9",
+  "active": "5206f6298af34562",
   "lastOpenFiles": [
+    "Posts/ServerManaging/BaseTemplate 1.md",
+    "Assets/Template/BaseTemplate.md",
     "Posts/Hello!.md",
     "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
+    "Posts/EdgeDevice/Setting up esp32 systems with cameras.md",
+    "Assets/Template",
+    "Posts/EdgeDevice",
+    "Posts/ServerManaging",
     "Assets/Images/Pasted image 20260620194731.png",
     "Hello!.md",
     "Personal/메모/2026. 03. 11. 수요일.md",
@@ -235,8 +241,6 @@
     "Assets/Images/Pasted image 20260605164331.png",
     "Assets/Images",
     "Assets",
-    "환영합니다!.md",
-    "Personal/메모",
-    "Personal/일기"
+    "환영합니다!.md"
   ]
 }
