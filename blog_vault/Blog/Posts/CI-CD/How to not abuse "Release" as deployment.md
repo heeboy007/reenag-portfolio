@@ -10,6 +10,7 @@ tags:
 Simple screen:
 ![[Pasted image 20260620194731.png]]
 
+
 equation
 $$
 	a = b
