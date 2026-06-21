@@ -72,6 +72,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+hr {
+  margin: 1rem 0;
+}
+
+pre {
+  background-color: var(--background-button);
+  border-radius: 12px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
 *::-webkit-scrollbar {
   display: none;              /* Chrome, Safari, Edge */
 }

@@ -26,16 +26,10 @@ function Blog() {
             <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '24px' }}>
                 ReenAG's Blog
             </h1>
-
-            <MyPrettyButton title='go back' href='/'>
-                <div style={{ margin: '2px' }}>
-                    <p style={{  color: 'text-foreground-primary', textDecoration: 'none'  }}>⬅️ back</p>
-                </div>
-            </MyPrettyButton>
         
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '16px', listStyle: 'none', padding: 0, paddingTop: '8px' }}>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '16px', listStyle: 'none' }}>
                 {posts.map((post) => (
-                <li key={post.slug} style={{ borderBottom: '1px solid text-foreground-secondary', paddingBottom: '16px' }}>
+                <li key={post.slug} style={{ borderBottom: '1px solid text-foreground-secondary'}}>
                     <div style={{display: 'flex', flexDirection: 'row', minHeight: "100px" }}>
                         {post.meta.thumbnail ?
                             <div className="border border-foreground-primary rounded-lg w-[100px] h-[100px] mr-[10px] relative overflow-hidden">
@@ -64,11 +58,18 @@ function Blog() {
                             </small>
                         </div>
                     </div>
-                    <hr style={{ marginTop: "8px" }}></hr>
+                    <hr></hr>
                 </li>
                 ))}
             </ul>
-            <div className="absolute bottom-0 right-0 p-4">
+            <div className="fixed top-0 left-0 p-4">
+                <MyPrettyButton title='go back' href='/'>
+                    <div style={{ margin: '2px' }}>
+                        <p style={{  color: 'text-foreground-primary', textDecoration: 'none' }}>⬅️ back</p>
+                    </div>
+                </MyPrettyButton>
+            </div>
+            <div className="fixed bottom-0 right-0 p-4">
                 <ThemeToggler />
             </div>
         </div>

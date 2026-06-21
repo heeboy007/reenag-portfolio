@@ -1,8 +1,8 @@
 ---
 title: Template
-date: {{ date }}
-thumbnail: 
+thumbnail:
 smalltitle: template
 tags:
   - "#template"
+date:
 ---
