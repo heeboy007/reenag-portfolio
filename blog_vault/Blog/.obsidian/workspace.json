@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Posts/ML/Deploying a YOLO model to ec2 for my teammates.md",
+                "file": "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deploying a YOLO model to ec2 for my teammates"
+              "title": "How to not abuse \"Release\" as deployment"
             }
           }
         ]
@@ -180,8 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,8 +197,10 @@
   },
   "active": "7681b99c72a6e62d",
   "lastOpenFiles": [
-    "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
+    "Assets/Images/Pasted image 20260624020853.png",
+    "Assets/Images/Pasted image 20260624005531.png",
     "Posts/ML/Deploying a YOLO model to ec2 for my teammates.md",
+    "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
     "Assets/Images/Pasted image 20260622011434.png",
     "Assets/Images/Pasted image 20260622011320.png",
     "Assets/Images/Pasted image 20260622011317.png",
@@ -241,7 +242,6 @@
     "Assets/Images/Requirements.pdf",
     "Assets/Images/Requirements 1.pdf",
     "Assets/Images/Pasted image 20260620165013.png",
-    "Assets/Images/Pasted image 20260614193013.png",
     "Assets/Images"
   ]
 }
