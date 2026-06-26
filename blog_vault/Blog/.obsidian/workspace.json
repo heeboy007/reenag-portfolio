@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
+                "file": "Posts/ServerManaging/Bringing back pcie link speed on old motherborads with linux kernel and setpci.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How to not abuse \"Release\" as deployment"
+              "title": "Bringing back pcie link speed on old motherborads with linux kernel and setpci"
             }
           }
         ]
@@ -197,10 +197,12 @@
   },
   "active": "7681b99c72a6e62d",
   "lastOpenFiles": [
+    "Assets/Images/Pasted image 20260626153754.png",
+    "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
+    "Posts/ServerManaging/Bringing back pcie link speed on old motherborads with linux kernel and setpci.md",
     "Assets/Images/Pasted image 20260624020853.png",
     "Assets/Images/Pasted image 20260624005531.png",
     "Posts/ML/Deploying a YOLO model to ec2 for my teammates.md",
-    "Posts/CI-CD/How to not abuse \"Release\" as deployment.md",
     "Assets/Images/Pasted image 20260622011434.png",
     "Assets/Images/Pasted image 20260622011320.png",
     "Assets/Images/Pasted image 20260622011317.png",
@@ -233,7 +235,6 @@
     "Personal/메모/2026. 05. 30. 토요일.md",
     "Personal/메모/2026. 05. 13. 수요일.md",
     "Personal/메모/2026. 05. 12. 화요일.md",
-    "Personal/일지/2026. 03. 23. 화요일.md",
     "Assets/Images/a.svg",
     "Personal",
     "Assets/Images/a 1.svg",
@@ -241,7 +242,6 @@
     "Assets/Images/hw2_com_register_survey.drawio 1.svg",
     "Assets/Images/Requirements.pdf",
     "Assets/Images/Requirements 1.pdf",
-    "Assets/Images/Pasted image 20260620165013.png",
     "Assets/Images"
   ]
 }
